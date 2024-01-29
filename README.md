@@ -19,10 +19,15 @@ Please cite the following paper in your publications if you use the python imple
 ``
 @article{qiao2024fully,
   title={Fully Unsupervised Deepfake Video Detection via Enhanced Contrastive Learning},
+  
   author={Qiao, Tong and Xie, Shichuang and Chen, Yanli and Retraint, Florent and Luo, Xiangyang},
+  
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  
   year={2024},
+  
   publisher={IEEE}
+  
 }
 ``
 
