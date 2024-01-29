@@ -18,4 +18,4 @@ Stage 3 code: binary_classifier.py
 Please cite the following paper in your publications if you use the python implementations:
 
 # Acknowledgments
-This is an [example link](https://github.com/sthalles/SimCLR).
+[SimCLR](https://github.com/sthalles/SimCLR).
