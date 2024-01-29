@@ -16,6 +16,16 @@ Stage 3 code: binary_classifier.py
 
 # Citations
 Please cite the following paper in your publications if you use the python implementations:
-
+'''
+@article{qiao2024fully,
+  title={Fully Unsupervised Deepfake Video Detection via Enhanced Contrastive Learning},
+  author={Qiao, Tong and Xie, Shichuang and Chen, Yanli and Retraint, Florent and Luo, Xiangyang},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}
+'''
 # Acknowledgments
 [SimCLR](https://github.com/sthalles/SimCLR).
+[SupContrast](https://github.com/HobbitLong/SupContrast)
+[EVA](https://github.com/FalkoMatern/Exploiting-Visual-Artifacts)
