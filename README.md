@@ -1,5 +1,5 @@
 # Introduction
-The official PyTorch implementation for the following paper:
+The PyTorch implementation for the following paper:
 ## Fully Unsupervised Deepfake Video Detection via Enhanced Contrastive Learning
 ![alt text](Pipeline.png "Illustration of the proposed fully unsupervised framework")
 Paper link: (https://ieeexplore.ieee.org/abstract/document/10411047)
