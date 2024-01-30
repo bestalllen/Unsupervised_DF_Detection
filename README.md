@@ -4,6 +4,10 @@ The PyTorch implementation for the following paper:
 ![alt text](Pipeline.png "Illustration of the proposed fully unsupervised framework")
 Paper link: (https://ieeexplore.ieee.org/abstract/document/10411047)
 
+# Changelog
+2024.1.22: Pre-released this repository.
+2024.1.30: Updated the implementation in stage1.
+
 # Environment
 Python==3.7.6, torch==1.10.1, torchvision==0.11.2, cudatoolkit==11.1
 
@@ -27,7 +31,7 @@ Please cite the following paper in your publications if you use the python imple
 ```
 
 # Acknowledgments
-[SimCLR](https://github.com/sthalles/SimCLR).
+[SimCLR](https://github.com/sthalles/SimCLR)
 
 [SupContrast](https://github.com/HobbitLong/SupContrast)
 
