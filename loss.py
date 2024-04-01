@@ -5,11 +5,9 @@ import torch.nn as nn
 
 
 class ECLoss(nn.Module):
-    def __init__(self, temperature=0.07, contrast_mode='all',
-                 base_temperature=0.07):
+    def __init__(self, temperature=0.07, base_temperature=0.07):
         super(ECLoss, self).__init__()
         self.temperature = temperature
-        self.contrast_mode = contrast_mode
         self.base_temperature = base_temperature
 
     def forward(self, features, labels=None, mask=None):
@@ -39,14 +37,8 @@ class ECLoss(nn.Module):
 
         contrast_count = features.shape[1]
         contrast_feature = torch.cat(torch.unbind(features, dim=1), dim=0)
-        if self.contrast_mode == 'one':
-            anchor_feature = features[:, 0]
-            anchor_count = 1
-        elif self.contrast_mode == 'all':
-            anchor_feature = contrast_feature
-            anchor_count = contrast_count
-        else:
-            raise ValueError('Unknown mode: {}'.format(self.contrast_mode))
+        anchor_feature = contrast_feature
+        anchor_count = contrast_count
 
         # compute logits
         anchor_dot_contrast = torch.div(
