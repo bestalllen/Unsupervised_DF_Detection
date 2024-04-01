@@ -4,7 +4,6 @@ import torchvision.transforms as transforms
 
 
 class TwoCropTransform:
-    """Create two crops of the same image"""
 
     def __init__(self, transform):
         self.transform = transform
