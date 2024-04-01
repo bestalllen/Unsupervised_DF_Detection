@@ -212,7 +212,7 @@ def main():
         video_label = entry["video label"]
 
         # Generate the regular expression pattern for image file names
-        pattern = re.compile(f"{video_name}_(\d+)\..+")
+        pattern = re.compile(f"{video_name}(\d+)")
 
         # Filter out all image file names for the current video
         video_image_names = [image_name for image_name in unlabeled_data_name_list if pattern.match(image_name)]
