@@ -25,7 +25,6 @@ def get_boundingbox(face, width, height, scale=1.3, minsize=None):
             size_bb = minsize
     center_x, center_y = (x1 + x2) // 2, (y1 + y2) // 2
 
-    # Check for out of bounds, x-y top left corner
     x1 = max(int(center_x - size_bb // 2), 0)
     y1 = max(int(center_y - size_bb // 2), 0)
     # Check for too big bb size for given x, y
