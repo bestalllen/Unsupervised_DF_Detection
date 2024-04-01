@@ -12,6 +12,8 @@ Stage 1 code: ``pseudo_label_generator.py``
 
 Stage 2 code: ``enhanced_contrastive_learner.py``
 
+Stage 3 code: In release
+
 # Citations
 Please cite the following paper in your publications if you use the python implementations:
 ```
