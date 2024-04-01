@@ -24,7 +24,7 @@ Please cite the following paper in your publications if you use the python imple
   year={2024},
   publisher={IEEE}
 }
-```
+```            
 
 # Acknowledgments
 [SimCLR](https://github.com/sthalles/SimCLR).
