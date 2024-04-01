@@ -177,10 +177,6 @@ class ECL(nn.Module):
         # add mlp projection head
         self.backbone.fc = nn.Sequential(nn.Linear(dim_mlp, dim_mlp), nn.ReLU(), self.backbone.fc)
 
-        # if encoder_pretrained:
-        #     print("Load pretrained model")
-        #     self.backbone.load_state_dict(torch.load(""), strict=False)
-
     def forward(self, x):
         feat = self.backbone(x)
         feat_contrast = F.normalize(feat, dim=1)
