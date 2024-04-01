@@ -224,12 +224,7 @@ def main():
                 "image name": image_name,
                 "image label": video_label
             }
-
-            # Add the new dictionary entry to the list of new dictionary data
             new_data.append(new_entry)
-
-    # new_data = {image: video_pseudo_labels[image.split("_")[0]] for image, _ in data}
-    # output_data = [{"image_name": image, "pseudo_label": pseudo_label} for image, pseudo_label in new_data.items()]
 
     with open("pseudo_label.json", "w") as output_file:
         json.dump(new_data, output_file, indent=2)
