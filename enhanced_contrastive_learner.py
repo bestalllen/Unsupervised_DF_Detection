@@ -197,8 +197,7 @@ def main():
         json_data = json.load(file)
 
     pseudo_label_dict = {entry["image name"]: entry["image label"] for entry in json_data}
-    # print(pseudo_label_dict)
-    # print(pseudo_label_dict.keys())
+
     # build data loader
     train_loader, select_confidence_loader = set_loader(pseudo_label_dict, args)
 
