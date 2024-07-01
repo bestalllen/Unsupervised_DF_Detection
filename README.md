@@ -12,7 +12,7 @@ Stage 1 code: ``pseudo_label_generator.py``
 
 Stage 2 code: ``enhanced_contrastive_learner.py``
 
-Stage 3 code: Please send your application to this email address: multimedia_sec@163.com 
+If you need the third stage test code, or you have questions about the project, please apply and ask through this email：multimedia_sec@163.com
 
 # Citations
 Please cite the following paper in your publications if you use the python implementations:
