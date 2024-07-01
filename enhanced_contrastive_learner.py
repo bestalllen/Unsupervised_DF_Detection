@@ -18,7 +18,6 @@ from data.transform import TwoCropTransform, get_transforms
 from data.dataset import CustomImageDataset
 from loss import ECLoss
 from model import ECL
-os.environ["CUDA_VISIBLE_DEVICES"] = '0,1'
 
 
 def args_func():
