@@ -25,8 +25,6 @@ def args_func():
 
     parser.add_argument('--print_freq', type=int, default=100,
                         help='print frequency')
-    parser.add_argument('--save_freq', type=int, default=100,
-                        help='save frequency')
     parser.add_argument('--batch_size', type=int, default=128,
                         help='batch_size')
     parser.add_argument('--num_workers', type=int, default=16,
@@ -222,10 +220,16 @@ def main():
         # train for one epoch
         time1 = time.time()
 
-        if (epoch - 1) % args.select_confidence_sample == 0:
+        if epoch % args.select_confidence_sample == 0 and epoch != args.epochs:
+            
+            # save the model from the previous cycle
+            save_file = os.path.join(save_folder, 'ckpt_epoch_{epoch}.pth'.format(epoch=epoch))
+            save_model(model, optimizer, args, epoch, save_file)
+
+            # select the training sample for the new cycle
             confidence_label_dict = select_confidence_sample(model, select_confidence_loader, args)
             train_loader, _ = set_loader(confidence_label_dict, args)
-            # model.init_weights() # alternative strategy
+            model.init_weights() # alternative strategy
 
         loss = train(train_loader, model, criterion, optimizer, epoch, args)
         time2 = time.time()
@@ -234,11 +238,6 @@ def main():
         # tensorboard logger
         logger.log_value('loss', loss, epoch)
         logger.log_value('learning_rate', optimizer.param_groups[0]['lr'], epoch)
-
-        if epoch % args.save_freq == 0:
-            save_file = os.path.join(
-                save_folder, 'ckpt_epoch_{epoch}.pth'.format(epoch=epoch))
-            save_model(model, optimizer, args, epoch, save_file)
 
     # save the last model
     save_file = os.path.join(save_folder, 'last.pth')
