@@ -7,6 +7,11 @@ Paper link: (https://ieeexplore.ieee.org/abstract/document/10411047)
 # Environment
 Python==3.7.6, torch==1.10.1, torchvision==0.11.2, cudatoolkit==11.1
 
+# Changelog
+2024.07.02: Fixed bug in the stage 2 code.
+2024.06.15: Updataed the stage 1 code.
+2024.03.10: Pre-released this repository.
+
 # Run
 Stage 1 code: ``pseudo_label_generator.py``
 
